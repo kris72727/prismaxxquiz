@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Prisma X Intelligence Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="particles"></canvas>
+
+<img src="logo.png" class="logo">
+
+<audio id="bg-music" loop>
+  <source src="bg-music.mp3" type="audio/mpeg">
+</audio>
+
+<div id="welcome-screen" class="screen">
+  <h1>Prisma X Teleoperation Intelligence Quiz</h1>
+  <button onclick="startQuiz()">Start Quiz</button>
+  <img src="robot.png" class="robot">
+</div>
+
+<div id="quiz-screen" class="screen hidden">
+  <div class="quiz-box">
+
+    <div class="progress-container">
+      <div id="progress-bar"></div>
+    </div>
+
+    <div id="timer">Time: 15</div>
+
+    <h2 id="question-number"></h2>
+    <h3 id="question"></h3>
+    <div id="answers"></div>
+
+    <div class="controls">
+      <button onclick="prevQuestion()">⬅</button>
+      <button onclick="nextQuestion()">➡</button>
+      <button onclick="resetQuiz()">Reset</button>
+      <button onclick="toggleMusic()">🔊</button>
+    </div>
+
+    <div class="volume-control">
+      Volume:
+      <input type="range" min="0" max="1" step="0.1" value="0.5" onchange="changeVolume(this.value)">
+    </div>
+
+  </div>
+</div>
+
+<div id="result-screen" class="screen hidden">
+  <h2>Your Score: <span id="final-score"></span>/15</h2>
+  <p id="grade"></p>
+  <button onclick="restart()">Restart</button>
+</div>
+
+<canvas id="confetti-canvas"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
