@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #000000, #14002e, #001f3f);
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.logo {
+  position: fixed;
+  top: 20px;
+  left: 25px;
+  width: 120px;
+}
+
+.robot {
+  width: 220px;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.screen {
+  padding-top: 140px;
+}
+
+.hidden {
+  display: none;
+}
+
+.quiz-box {
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 15px;
+  width: 60%;
+  margin: auto;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(150, 0, 255, 0.5);
+}
+
+.progress-container {
+  width: 100%;
+  background: rgba(255,255,255,0.1);
+  height: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #6a00ff, #00ffcc);
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+button {
+  padding: 12px 25px;
+  margin: 10px;
+  background: #6a00ff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #9d4dff;
+  box-shadow: 0 0 15px #9d4dff;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+#timer {
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #00ffcc;
+}
+
+#grade {
+  font-size: 20px;
+  font-weight: bold;
+  color: #00ffcc;
+}
+
+.volume-control {
+  margin-top: 15px;
+}
+
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
